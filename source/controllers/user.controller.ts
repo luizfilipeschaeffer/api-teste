@@ -26,7 +26,7 @@ export const createUserController = async (request: Request, response: Response)
     const { userId } = request.params
     const { name, email } = request.body
 
-    if(!name || email) {
+    if(!name || !email) {
         return response.send({
             error: 'Nome ou email são invalidos'
         })
